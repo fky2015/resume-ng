@@ -1,8 +1,9 @@
 \documentclass{resume}
 
 \usepackage[colorlinks=false,hidelinks,
-% pdfborderstyle={/S/U/W 1},urlbordercolor={0 0 0},
+pdfborderstyle={/S/U/W 1},urlbordercolor={0 0 0},
 ]{hyperref}
+\usepackage{xcolor}
 \usepackage{lipsum}
 
 \ResumeName{冯开宇}
@@ -12,7 +13,7 @@
 \ResumeContacts{
   (+86) 188-8888-8888,%
   \href{mailto:loveress01@outlook.com}{loveress01@outlook.com},%
-  \href{https://blog.fkynjyq.com}{https://blog.fkynjyq.com},%
+  \href{https://blog.fkynjyq.com}{https://blog.fkynjyq.com} \footnote{下划线内容包含超链接。},%
   % \href{https://github.com/fky2015}{https://github.com/fky2015}%
 }
 
@@ -20,30 +21,33 @@
 
 \section{个人总结}
 
-本人
+\begin{itemize}
+  \item 本人
+\end{itemize}
 
 有开源项目维护经验。
 
 \section{教育经历}
-\ResumeItem{{\heiti 北京理工大学}，网络空间安全|网络空间安全学院，\textit{在读学术型硕士研究生}}[2021.09 - 2024.06（预计）]
-主要研究方向为\textbf{拜占庭共识算法}，在区块链领域方面有一定的研究和工程经验。
+\ResumeItem{{\heiti 北京理工大学}，网络空间安全|网络空间安全学院，\textit{学术型硕士研究生}}[2021.09 - 2024.06（预计）]
+主要研究方向为\textbf{拜占庭共识算法}，在区块链和分布式系统领域方面有一定的研究和工程经验。
 \ResumeItem{{\heiti 北京理工大学}，计算机科学与技术|计算机学院，\textit{工学学士}}[2017.09 - 2021.06]
-\textbf{排名5/xxx(前5\%)}，学业奖学金多次，全国大学生信息安全竞赛二等奖（2次），龙芯杯三等奖。
+\textbf{排名5/xxx(前5\%)}，获学业奖学金多次，全国大学生信息安全竞赛二等奖（2次），龙芯杯三等奖。
 
 
 \section{技术能力}
 \begin{itemize}
-  \item \textbf{编程语言}: JavaScript (ECMAScript, Node.js), HTML/CSS, Python, Go, SQL, C, Shell
-  \item \textbf{操作系统,数据库与工程构建}: Linux/macOS/MySQL/MongoDB/Git/webpack/Progressive Web App
-  \item \textbf{关键词}: React/Vue.js/D3.js(SVG)/three.js(canvas, WebGL)/chrome extension/Express
+  \item \textbf{后端}: Rust, Golang, Python.
+  % \item \textbf{前端}: React, Vue.js, TypeScript, HTML/CSS.
+  \item \textbf{运维}: Docker, Kubernetes, Linux.
+  \item \textbf{关键词}: 
 \end{itemize}
 
 \section{工作经历}
 
-\ResumeItem{{\heiti 北京字节跳动科技有限公司}，后端开发实习生|番茄小说，\textit{在读学术型硕士研究生}}[2020.10 - 2021.03] 
+\ResumeItem{{\heiti 北京字节跳动科技有限公司}|\textit{后端开发实习生|番茄小说}}[2020.10 - 2021.03] 
 \begin{itemize}
-  \item 参与产品需求分析，设计系统技术方案，完成开发、测试和上线；
-  \item 参与海量数据分析，挖掘用户需求，并在海量真实用户群上验证。
+  \item 独立负责站内信业务的设计、开发、测试和部署。通过 FaaS、Kafka 实现站内信模板渲染服务，解决重发漏发问题。向上游提供 SDK 代码，增加或升级了多种离线和在线的发送逻辑。
+  \item 参与作家后台、用户后端的需求分析，设计系统技术方案，完成开发、灰度测试、上线和监控。
 \end{itemize}
 
 
@@ -51,21 +55,38 @@
 
 \ResumeItem{{\heiti Substrate平台下的拜占庭共识算法实现} | \textit{共识算法设计与实现}}
 [2021.11 - 2022.07] 
+\begin{itemize}
+  % TODO: 
+  \item 根据 Substrate (Rust 实现的开源区块链框架) 的架构设计，修改并实现 PBFT 和 Tendermint 的共识算法。
+  \item 研究底层代码，为团队内的其他同学设计智能合约、应用层代码的架构提供技术支持。
+  \item 针对系统进行性能测试，并优化吞吐量。 
+\end{itemize}
+
+\ResumeItem{{\heiti \href{https://github.com/BITNP/BIThesis}{BIThesis 北京理工大学毕设 LaTeX 模板集合(开源项目)}}  | \textit{主要维护者}}
+[2020.04 至今]
+\begin{itemize}
+  \item 根据相关排版要求，利用 LaTeX3 (expl3) 设计一套符合要求且支持灵活配置的毕设模板。
+  \item 需求开发和问题修复采用标准工作流，利用 Github Actions 进行多种测试。模板代码和使用手册分发至多个平台。
+  \item 负责积极与学校进行沟通，获得了学校的认可和支持；维护社区，及时响应用户的需求；并撰写了大量文档。目前模板下载量超过4000次。
+\end{itemize}
+
 
 \ResumeItem{{\heiti 区块链在线教学实验平台} | \textit{架构设计、全栈开发}}
 [2020.12 - 2021.06] 
+
+\begin{itemize}
+  \item 设计并实现了基于 Kubernetes 的在线教学平台架构，支持基于用户或者班级的动态容器编排。
+  \item 设计并实现一套前后端的平台框架代码（前端采用 Vue.js，后端采用 Spring Boot），提供路由、数据统计、用户信息管理以及实验环境管理能力，使团队内的其他同学只需要专注于开发具体教学实验逻辑。
+  \item 基于此平台，实现了基于 Hyperledger Fabric 的交互教学实验，并协助其他同学实现了比特币、以太坊的相关实验。
+  \item 编写了相关的 CI/CD 以及部署脚本，在多个环境下部署并运维此系统。
+\end{itemize}
 
 \ResumeItem{{\heiti 电脑诊所线上预约系统} | \textit{架构设计、全栈开发}}
 [2019.07 - 2019.10] 
 
 \begin{itemize}
- \item 后端：Django 2.x + Django-Rest-Framework + 后期用 Celery 扩展了异步任务调度功能，用于定时监听。
- \item 前端：SPA 的形式 + Vue.js 2.x + Vuetify 库 + 接触到了较为完整的 Vue 生态。
-微信端：接入了学校的企业号微信平台，因此不是微信小程序，而是 SPA + VUX 库 + 使用 Groovy 脚本作为中间代理
-(嵌入在 Grails 中)。
- \item 运维：使用我们学生组织自己的 GitLab，包括 CI + 使用 Docker 打包，Docker-compose 管理。
+  \item 后端采用 Django + REST API；前端(包括管理后台和用户应用)采用 Vue.js 基于 Vuetify/VUX 实现 SPA，开发采用 GitLab 及其 CI，运维使用 Docker-compose 组织容器。
+  \item 完成需求分析、系统设计和代码实现。与学校积极对接，接入了学校的统一服务平台，向全校师生提供服务。该系统目前仍在投入使用。
 \end{itemize}
-
-\section{社区参与}
 
 \end{document}
