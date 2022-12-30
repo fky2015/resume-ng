@@ -46,6 +46,9 @@
 % Set the line spacing.
 \linespread{1.1}
 
+% New counter for bookmarks.
+\newcounter{resumebookmark}
+
 %%% User Commands %%%
 
 % Predefined commands.
@@ -88,16 +91,34 @@
   \end{center}
 }
 
-\NewDocumentCommand{\ResumeItem}{mo}
+\NewDocumentCommand{\ResumeItem}{omoo}
 {
   {
     \zihao{-4}
     \par 
     \noindent
-    #1
-    \hfill
-    \IfValueT{#2}{
+    {
+      \heiti
       #2
+      
+      \IfValueTF{#1}
+      {
+        \pdfbookmark[2]{#1}{subsec:\arabic{resumebookmark}}
+      }
+      {
+        \pdfbookmark[2]{#2}{subsec:\arabic{resumebookmark}}
+      }
+      \stepcounter{resumebookmark}
+    }
+    \IfValueT{#3}{
+      | 
+      \textit{
+        #3
+      }
+    }
+    \hfill
+    \IfValueT{#4}{
+      #4
     }
     \par
   }
