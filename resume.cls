@@ -4,13 +4,23 @@
 
 \LoadClass[zihao=5,autoindent=0.5em]{ctexbook}
 
+% Define paper size.
 \RequirePackage{geometry}
+% Override the default header and footer settings.
 \RequirePackage{fancyhdr}
+% Redefine list style.
 \RequirePackage{enumitem}
+% Align all footnotes in a row.
+\RequirePackage[para]{footmisc}
 % Remove the default header and footer
+\RequirePackage[colorlinks=false,hidelinks,
+pdfborderstyle={/S/U/W~0.5},urlbordercolor={0~0~0},linkcolor={0~0~0},
+linkbordercolor={0~0~0},citebordercolor={0~0~0},filebordercolor={0~0~0},
+]{hyperref}
+\RequirePackage{xcolor}
 \pagestyle{empty}
 
-\geometry{a4paper,margin=1cm}
+\geometry{a4paper,margin=1cm,top=0.75cm}
 
 \seq_new:N \g__resume_contacts_seq
 \tl_new:N \g__resume_title_name_tl
@@ -86,6 +96,7 @@
   \begin{center}
     \zihao{-2} \heiti \g__resume_title_name_tl
   \end{center}
+  \vspace{-1.5em}
   \begin{center}
     \seq_use:Nnnn \g__resume_contacts_seq {~|~} {~|~} {~|~}
   \end{center}
@@ -111,7 +122,7 @@
       \stepcounter{resumebookmark}
     }
     \IfValueT{#3}{
-      | 
+      \ | 
       \textit{
         #3
       }
