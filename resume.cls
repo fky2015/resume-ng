@@ -135,4 +135,9 @@ linkbordercolor={0~0~0},citebordercolor={0~0~0},filebordercolor={0~0~0},
   }
 }
 
+\NewDocumentCommand{\GrayText}{m}
+{
+  \textcolor{gray}{#1}
+}
+
 \endinput
