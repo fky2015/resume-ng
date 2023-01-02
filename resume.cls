@@ -6,17 +6,20 @@
 
 % Define paper size.
 \RequirePackage{geometry}
-% Override the default header and footer settings.
+% Remove the default header and footer.
 \RequirePackage{fancyhdr}
 % Redefine list style.
 \RequirePackage{enumitem}
 % Align all footnotes in a row.
 \RequirePackage[para]{footmisc}
-% Remove the default header and footer
-\RequirePackage[colorlinks=false,hidelinks,
-pdfborderstyle={/S/U/W~0.5},urlbordercolor={0~0~0},linkcolor={0~0~0},
-linkbordercolor={0~0~0},citebordercolor={0~0~0},filebordercolor={0~0~0},
+\RequirePackage[colorlinks=false,
+hidelinks,
+% pdfborderstyle={/S/U/W~1},
+% urlbordercolor={0~0~0},linkcolor={0~0~0},
+% linkbordercolor={0~0~0},citebordercolor={0~0~0},filebordercolor={0~0~0},
 ]{hyperref}
+% 
+\RequirePackage{xeCJKfntef}
 \RequirePackage{xcolor}
 \pagestyle{empty}
 
@@ -138,6 +141,11 @@ linkbordercolor={0~0~0},citebordercolor={0~0~0},filebordercolor={0~0~0},
 \NewDocumentCommand{\GrayText}{m}
 {
   \textcolor{gray}{#1}
+}
+
+\NewDocumentCommand{\ResumeUrl}{mm}
+{
+  \href{#1}{\CJKunderline{#2}}
 }
 
 \endinput

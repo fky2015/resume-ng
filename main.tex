@@ -5,19 +5,17 @@
 
 \ResumeContacts{
   (+86) 188-8888-8888,%
-  \href{mailto:loveress01@outlook.com}{loveress01@outlook.com},%
-  \href{https://blog.fkynjyq.com}{blog.fkynjyq.com} \footnote{下划线内容包含超链接。},%
-  \href{https://github.com/fky2015}{github.com/fky2015}%
+  \ResumeUrl{mailto:loveress01@outlook.com}{loveress01@outlook.com},%
+  \ResumeUrl{https://blog.fkynjyq.com}{blog.fkynjyq.com} \footnote{下划线内容包含超链接。},%
+  \ResumeUrl{https://github.com/fky2015}{github.com/fky2015}%
 }
-
-% TODO: 增加一些加粗内容
 
 \ResumeTitle
 
 \section{个人总结}
 
 \begin{itemize}
-  % TODO: 减少这种没有事实依据的自述
+  % TODO: 减少没有事实依据的自述
   \item 本人乐观开朗、在校成绩优异、自驱能力强，具有良好的沟通能力和团队合作精神，可以使用英语进行工作交流（六级成绩 549）。
   \item 有六年 Linux 使用经验，较为丰富的软件开发经验、开源项目贡献和维护经验。善于技术写作，持续关注互联网技术发展。
   \item 求职意向：分布式系统开发及相关工作。
@@ -78,29 +76,30 @@
   \item 根据 Substrate (Rust 实现的开源区块链框架) 的独特架构设计，\textbf{修改并实现 PBFT 和 Tendermint 的共识算法}。
   % TODO: maybe remove this
   \item 研究底层代码，为团队内的其他同学设计智能合约、应用层代码的架构提供技术支持。
-  \item 针对系统进行性能测试，分析瓶颈，并优化吞吐量。 
+  \item 与另一同学一起针对系统进行性能测试，分析瓶颈，并优化吞吐量；TPS 由 1K 达到 6K。
+  \item 此项目为实验室研究项目的一部分。
 \end{itemize}
 
-\ResumeItem{\href{https://github.com/BITNP/BIThesis}{\textbf{BIThesis} 北京理工大学毕设 LaTeX 模板集合(开源项目)}}
+\ResumeItem{\ResumeUrl{https://github.com/BITNP/BIThesis}{\textbf{BIThesis} 北京理工大学毕设 LaTeX 模板集合(开源项目)}}
 [主要维护者]
 [2020.04 至今]
 
 \begin{itemize}
   \item 根据相关排版要求，\textbf{利用 LaTeX3 (expl3) 设计了同时符合各个学位要求且支持灵活配置的宏包及多套模板}。
-  \item 需求开发和问题修复采用标准工作流，利用 Github Actions 进行多种测试。
-  \item 负责积极与学校进行沟通，获得了学校的认可和支持；维护社区，及时响应用户的需求；并撰写了大量文档。模板代码和使用手册分发至多个平台，仅 Github Releases 的模板下载量超过4000次。
+  \item 需求开发和问题修复采用标准工作流，引入了回归测试与基于 Github Actions 的测试与持续集成。
+  \item 负责积极与学校进行沟通以审核模板；维护社区，及时响应用户的需求；撰写了大量文档。模板代码和使用手册分发至多个平台，仅 Github Releases 的模板下载量超过4000次。多届毕业生采用此模板进行毕业论文撰写。
 \end{itemize}
 
 
-\ResumeItem{区块链在线教学实验平台}
+\ResumeItem{区块链在线交互教学实验平台}
 [架构设计、全栈开发]
 [2020.12 - 2021.06] 
 
 \begin{itemize}
   \item 设计并实现了\textbf{基于 Kubernetes 的在线教学平台架构，支持基于用户或者班级的动态容器编排}。
-  \item 设计并实现\textbf{一套前后端的平台框架代码}（前端采用 Vue.js，后端采用 Spring Boot），提供路由、数据统计、用户信息管理以及 K8s 实验环境管理能力，使团队内的其他同学只需要专注于开发具体教学实验逻辑。
-  \item 基于此平台，实现了基于 Hyperledger Fabric 的交互教学实验，并协助其他同学实现了比特币、以太坊的相关教学实验。
-  \item 编写了相关的 CI/CD 以及部署脚本，在多个环境下部署（脚本或 Ansible）并运维此系统。
+  \item 设计并实现\textbf{一套前后端的平台框架代码}（前端采用 Vue.js，后端采用 Spring Boot），提供路由、数据统计、用户信息管理以及 K8s 实验环境管理能力，使团队内的其他同学只需要专注于开发具体交互教学实验逻辑。
+  \item 基于此平台实现了基于 Hyperledger Fabric 的交互教学实验，并协助其他同学实现了比特币、以太坊的相关内容。
+  \item 编写了相关的 CI/CD 以及部署脚本，在多个环境下部署（脚本或 Ansible）并运维此系统。该系统应用于在多位老师的教学工作和研究工作中。
 \end{itemize}
 
 \ResumeItem{电脑诊所线上预约系统}
