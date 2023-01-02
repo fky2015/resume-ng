@@ -23,7 +23,7 @@ hidelinks,
 \RequirePackage{xcolor}
 \pagestyle{empty}
 
-\geometry{a4paper,margin=1cm,top=0.75cm}
+\geometry{a4paper,margin=1cm, bottom=0.5cm}
 
 \seq_new:N \g__resume_contacts_seq
 \tl_new:N \g__resume_title_name_tl
@@ -42,7 +42,7 @@ hidelinks,
     format = \noindent \zihao{4} \heiti \__resume_section_title_format:n,
     indent = -1em,
     afterskip = 0.5em,
-    beforeskip = 0.75em,
+    beforeskip = 0.2em,
   },
 }
 
