@@ -1,6 +1,6 @@
 \RequirePackage{expl3,l3keys2e}
 \ProvidesExplClass{resume}
-{2022-12-26}{0.1.0}{A Resume Class by Feng Kaiyu}
+{2022-12-26}{0.1.0}{Another Resume Class by Feng Kaiyu}
 
 \LoadClass[zihao=5,autoindent=0.5em]{ctexbook}
 
@@ -12,12 +12,7 @@
 \RequirePackage{enumitem}
 % Align all footnotes in a row.
 \RequirePackage[para]{footmisc}
-\RequirePackage[colorlinks=false,
-hidelinks,
-% pdfborderstyle={/S/U/W~1},
-% urlbordercolor={0~0~0},linkcolor={0~0~0},
-% linkbordercolor={0~0~0},citebordercolor={0~0~0},filebordercolor={0~0~0},
-]{hyperref}
+\RequirePackage[colorlinks=false,hidelinks,]{hyperref}
 % 
 \RequirePackage{xeCJKfntef}
 \RequirePackage{xcolor}
