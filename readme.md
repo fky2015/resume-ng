@@ -4,6 +4,8 @@ A LaTeX resume designed for optimal information density and aesthetic appeal.
 
 一个旨在实现最佳的信息密度和美学吸引力的 LaTeX 简历排版项目。
 
+![preview](https://user-images.githubusercontent.com/16451516/211183737-8f8a97d9-fb25-4beb-bfc1-ac9ad91bc804.png)
+
 ## 包依赖
 
 如果你使用 TeXLive 发行版，可以直接使用本项目，无需手动安装依赖。
