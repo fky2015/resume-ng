@@ -2,7 +2,7 @@
 \ProvidesExplClass{resume}
 {2022-12-26}{0.1.0}{Another Resume Class by Feng Kaiyu}
 
-\LoadClass[zihao=5,autoindent=0.5em]{ctexbook}
+\LoadClass[zihao=5,autoindent=0.5em]{ctexart}
 
 % Define paper size.
 \RequirePackage{geometry}
@@ -13,16 +13,23 @@
 % Align all footnotes in a row.
 \RequirePackage[para]{footmisc}
 \RequirePackage[colorlinks=false,hidelinks,]{hyperref}
-% 
+% For the usage of `\CJKunderline`.
 \RequirePackage{xeCJKfntef}
+% Provide colors.
 \RequirePackage{xcolor}
+
+% Clean pagestyle.
 \pagestyle{empty}
 
+% Adopt A4 style but with smaller margins.
 \geometry{a4paper,margin=1cm, bottom=0.5cm}
 
-\seq_new:N \g__resume_contacts_seq
-\tl_new:N \g__resume_title_name_tl
+%%% Global Variables %%%
 
+% Store all contacts info.
+\seq_new:N \g__resume_contacts_seq
+% Store title name.
+\tl_new:N \g__resume_title_name_tl
 
 %%% Global Settings %%%
 
@@ -47,12 +54,12 @@
   labelwidth=5pt,
   leftmargin=1.3em,
   itemsep=0em,
-  parsep=0.25em,
+  parsep=0.20em,
   topsep=0em,
 }
 
 % Set the line spacing.
-\linespread{1.1}
+\linespread{1.15}
 
 % New counter for bookmarks.
 \newcounter{resumebookmark}
@@ -70,11 +77,16 @@
 {#1 \vspace{3pt} \hrule}
 
 
+% Add a contant info.
 \NewDocumentCommand{\ResumeContact}{m}
 {
   \__resume_append_concat:n {#1}
 }
 
+% Add multiple contant info.
+% ```
+% \ResumeContacts{ itemA, itemB, itemC }
+% ```
 \NewDocumentCommand{\ResumeContacts}{m}
 {
   \seq_set_from_clist:Nn \l__input_seq:N {#1}
@@ -84,22 +96,30 @@
   }
 }
 
+% Add your resume title, which generally is your name.
 \NewDocumentCommand{\ResumeName}{m}
 {
   \tl_set:Nn \g__resume_title_name_tl {#1}
 }
 
+% Render the title.
 \NewDocumentCommand{\ResumeTitle}{}
 {
   \begin{center}
     \zihao{-2} \heiti \g__resume_title_name_tl
   \end{center}
-  \vspace{-1.5em}
+  % Reduce the space.
+  \vspace{-1.4em}
   \begin{center}
     \seq_use:Nnnn \g__resume_contacts_seq {~|~} {~|~} {~|~}
   \end{center}
 }
 
+% Render the section title.
+% #1(optional): This content will be used as the bookmark in PDF.
+% #2: The title of the section.
+% #3(optional): The additional information of the section.
+% #4(optional): The right-aligned content, which normally will be the date range.
 \NewDocumentCommand{\ResumeItem}{omoo}
 {
   {
@@ -133,11 +153,13 @@
   }
 }
 
+% Gray out the content.
 \NewDocumentCommand{\GrayText}{m}
 {
   \textcolor{gray}{#1}
 }
 
+% Render content with a hyperlink, marked with underline.
 \NewDocumentCommand{\ResumeUrl}{mm}
 {
   \href{#1}{\CJKunderline{#2}}
