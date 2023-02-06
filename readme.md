@@ -5,7 +5,7 @@ A LaTeX resume designed for optimal information density and aesthetic appeal.
 一个旨在实现最佳的信息密度和美学吸引力的 $\LaTeX$ 简历排版模板项目。
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/16451516/211714193-866a5924-60a1-4801-a7fa-7eda5042d883.png" width="90%">
+  <img src="https://user-images.githubusercontent.com/16451516/216993913-45d2859e-146d-44c9-8ff2-e1f1183d64a7.png" width="90%">
 </div>
 
 本模板的特性包括：
@@ -47,7 +47,7 @@ A LaTeX resume designed for optimal information density and aesthetic appeal.
 
 ## 包依赖
 
-如果你使用 TeXLive 发行版，可以直接使用本项目，无需手动安装依赖。
+如果你使用 TeXLive/MiKTeX 等主流发行版，可以直接使用本项目，无需手动安装依赖。
 
 否则，请确保以下依赖安装。
 
