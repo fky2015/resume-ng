@@ -2,6 +2,9 @@
 \ProvidesExplClass{resume}
 {2022-12-26}{0.1.0}{Another Resume Class by Feng Kaiyu}
 
+% Keep Quiet
+\PassOptionsToPackage{quiet}{xeCJK}
+\ProcessOptions\relax
 \LoadClass[zihao=5,autoindent=0.5em]{ctexart}
 
 % Define paper size.
