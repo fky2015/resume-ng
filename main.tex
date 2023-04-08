@@ -14,14 +14,6 @@
 
 \ResumeTitle
 
-\section{个人总结}
-
-\begin{itemize}
-  \item 本人乐观开朗、在校成绩优异、自驱能力强，具有良好的沟通能力和团队合作精神，可以使用英语进行工作交流（六级成绩 xxx）。
-  \item 有六年 Linux 使用经验，较为丰富的软件开发经验、开源项目贡献和维护经验。善于技术写作，持续关注互联网技术发展。
-  \item 求职意向：分布式系统开发及相关实习工作。
-\end{itemize}
-
 \section{教育经历}
 \ResumeItem
 [北京理工大学大学|硕士研究生]
@@ -29,7 +21,7 @@
 [\textnormal{网络空间安全，网络空间安全学院|}  学术型硕士研究生]
 [2021.09—2024.06（预计）]
 
-主要研究方向为\textbf{拜占庭共识算法}，在区块链和分布式系统领域方面有一定的研究和工程经验。\textbf{2024年应届生}。
+\textbf{GPA: 3.62/4.0}，主要研究方向为\textbf{拜占庭共识算法}，在分布式系统领域方面有一定的研究和工程经验。\textbf{2024年应届生}。
 
 主要研究成果为：发表在 XXX 期刊上的论文《XXX》。
 
@@ -39,28 +31,46 @@
 [\textnormal{计算机科学与技术，计算机学院|} 工学学士]
 [2017.09—2021.06]
 
-\textbf{GPA: 3.7/4.0(专业前 5\%)}，获学业奖学金多次，全国大学生XYZ竞赛二等奖，XXX竞赛三等奖。
-
+\textbf{GPA: 3.7/4.0(专业前 3\%)}，获学业奖学金多次，全国大学生 XYZ 竞赛二等奖（2次），ZYX 竞赛三等奖。
 
 \section[技术能力]{技术能力\protect\footnote{与求职岗位无关的技能省略或用灰色表示。}}
 \begin{itemize}
-  \item \textbf{前后端}: Rust, Golang, Python, MySQL, \GrayText{React, Vue.js, JavaScript/TypeScript, HTML/CSS}
-  \item \textbf{运维}: Linux, Docker, Shell, Kubernetes, \GrayText{Ansible}.
-  \item \textbf{关键词}: Tokio.rs, Consensus Algorithm, Vim, Git, Kafka, Markdown, \GrayText{Next.js}, \GrayText{\LaTeX}, \GrayText{Django}
+  \item \textbf{语言}: 编程不受特定语言限制。常用 Rust, Golang, Python,C++； 熟悉 C, \GrayText{JavaScript}；了解 Lua, Java, \GrayText{TypeScript}。
+  \item \textbf{工作流}: Linux, Shell, (Neo)Vim, Git, GitHub, GitLab.
+  \item \textbf{其他}: 有容器化技术的实践经验，熟悉 Kubernetes 的使用。
 \end{itemize}
 
 \section{工作经历}
 
-\ResumeItem{北京ABCD有限公司}
+\ResumeItem{北京 ABCD 有限公司}
 [后端开发实习生/XXXX]
 [2020.10—2021.03] 
 
 \begin{itemize}
-  \item \textbf{独立负责XXX业务后端的设计、开发、测试和部署。}通过 FaaS、Kafka 等平台实现站内信模板渲染服务。向上游提供 SDK 代码，增加或升级了多种离线和在线逻辑。
-  \item \textbf{参与XXX的需求分析，系统技术方案设计；完成需求开发、灰度测试、上线和监控。}
+  \item \textbf{独立负责XXX业务后端的设计、开发、测试和部署。}通过 FaaS、Kafka 等平台实现站内信模板渲染服务。向上游提供 SDK 代码，增加或升级了多种离线和在线逻辑。完成了业务对站内信的多样需求。
+  \item \textbf{参与 XXX 的需求分析，系统技术方案设计；完成需求开发、灰度测试、上线和监控。}
 \end{itemize}
 
 \section{项目经历}
+
+\ResumeItem{\textbf{BusTub} 基于 C++ 的简易单机数据库}
+[ \textnormal{CMU 15-445} 课程]
+\begin{itemize}
+  \item 实现了基于可扩展哈希表和LRU-K的内存池管理。实现了可并发的B+树，支持乐观加锁的读写操作。
+  \item 采用火山模型实现了查询、修改、连接、聚合等查询执行器，对部分查询进行了改写与下推。
+  \item 采用 2PL 进行并发控制，支持死锁处理、多种隔离级别、表锁和行锁。
+  \item 对数据库系统有了基本的认识和实践。
+\end{itemize}
+
+
+\ResumeItem{\textbf{Multi-Raft} 分布式 \textbf{KV} 存储系统}
+[ \textnormal{MIT 6.824} 课程]
+\begin{itemize}
+  \item 实现了 Raft 协议的选举、日志复制、持久化、日志压缩等基本功能。
+  \item 基于 Raft 协议实现了满足线性一致性的 KV 数据库。
+  \item 采用 Multi-Raft 架构，支持数据分片，分片迁移，分片垃圾回收和分片迁移时读写优化。
+  \item 对分布式系统的设计考量有了更多的认识。
+\end{itemize}
 
 \ResumeItem{\textbf{ZYX} 平台下的某某共识算法设计与实现}
 [共识算法设计与实现]
@@ -73,8 +83,8 @@
 \end{itemize}
 
 \ResumeItem[BIThesis 北京理工大学毕设模板集合(开源项目)]
-{\ResumeUrl{https://github.com/BITNP/BIThesis}{\textbf{BIThesis} 北京理工大学毕设 \LaTeX 模板集合(开源项目)}}
-[主要维护者]
+{\ResumeUrl{https://github.com/BITNP/BIThesis}{\textbf{BIThesis} 北京理工大学毕设 \LaTeX 模板集合}}
+[主要维护者（开源项目）]
 [2020.04 至今]
 
 \begin{itemize}
@@ -83,27 +93,13 @@
   \item 负责了什么什么；完成了怎样的结果。
 \end{itemize}
 
-
-\ResumeItem{区块链在线交互教学实验平台}
-[架构设计、全栈开发]
-[2020.12—2021.06] 
+\section{个人总结}
 
 \begin{itemize}
-  \item 设计并实现了\textbf{基于 Kubernetes 的在线教学平台架构，支持基于用户或者班级的动态容器编排}。
-  \item 设计并实现\textbf{一套前后端的平台框架代码}（前端采用 Vue.js，后端采用 Spring Boot），提供路由、数据统计、用户信息管理以及 K8s 实验环境管理能力，使团队内的其他同学只需要专注于开发具体交互教学实验逻辑。
-  \item 基于此平台实现了基于 Hyperledger Fabric 的交互教学实验。
-  \item 编写了相关的 CI/CD 以及部署脚本，在多个环境下部署（脚本或 Ansible）并运维此系统。该系统应用于在多位老师的教学工作和研究工作中。
+  \item 本人乐观开朗、在校成绩优异、自驱能力强，具有良好的沟通能力和团队合作精神。
+  \item 可以使用英语进行工作交流（六级成绩 XXX），平时有阅读英文书籍和口语练习的习惯。
+  \item 有六年 Linux 使用经验，较为丰富的软件开发经验、开源项目贡献和维护经验。善于技术写作，持续关注互联网技术发展。
 \end{itemize}
 
-\ResumeItem{电脑诊所线上预约系统}
-[架构设计、全栈开发]
-[2019.07—2019.10] 
-
-\begin{itemize}
-  \item 需求源自于我加入的学生组织日常开展的电脑义诊活动。
-  \item 后端采用 Django + REST API；前端(包括管理后台和用户应用)采用 Vue.js 基于 Vuetify/VUX 实现 SPA，开发采用 GitLab 及其 CI (GitLab Runner)，运维使用 Docker Compose 管理容器。
-  \item 完成需求分析、系统设计和代码实现。与学校积极对接，接入了学校的统一服务平台，向全校师生提供服务。
-  \item 该系统目前仍在投入使用。
-\end{itemize}
 
 \end{document}
