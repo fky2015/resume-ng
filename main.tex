@@ -1,104 +1,119 @@
 % !TeX TS-program = xelatex
 
 \documentclass{resume}
-\ResumeName{冯开宇}
+\usepackage[style=ieee]{biblatex}
+
+% Define the bibliography file
+\addbibresource{own-bib.bib} % Replace "your_bibliography" with your actual BibTeX file name
+
+% \ResumeName{杨行}
 
 \begin{document}
 
 \ResumeContacts{
-  (+86) 188-8888-8888,%
-  \ResumeUrl{mailto:loveress01@outlook.com}{loveress01@outlook.com},%
-  \ResumeUrl{https://blog.fkynjyq.com}{blog.fkynjyq.com} \footnote{下划线内容包含超链接。},%
-  \ResumeUrl{https://github.com/fky2015}{github.com/fky2015}%
+  (+86) 131-6207-0162,%
+  \ResumeUrl{mailto:hangyang1223@gmail.com}{hangyang1223@gmail.com},%
+  % \ResumeUrl{https://blog.fkynjyq.com}{blog.fkynjyq.com} \footnote{下划线内容包含超链接。},%
+  % \ResumeUrl{https://frank2679.github.io}{github.com/frank2679.io}%
 }
+
 
 \ResumeTitle
 
-\section{教育经历}
-\ResumeItem
-[北京理工大学大学|硕士研究生]
-{北京理工大学}
-[\textnormal{网络空间安全，网络空间安全学院|}  学术型硕士研究生]
-[2021.09—2024.06（预计）]
-
-\textbf{GPA: 3.62/4.0}，主要研究方向为\textbf{拜占庭共识算法}，在分布式系统领域方面有一定的研究和工程经验。\textbf{2024年应届生}。
-
-主要研究成果为：发表在 XXX 期刊上的论文《XXX》。
-
-\ResumeItem
-[北京理工大学大学|本科生]
-{北京理工大学}
-[\textnormal{计算机科学与技术，计算机学院|} 工学学士]
-[2017.09—2021.06]
-
-\textbf{GPA: 3.7/4.0(专业前 3\%)}，获学业奖学金多次，全国大学生 XYZ 竞赛二等奖（2次），ZYX 竞赛三等奖。
-
-\section[技术能力]{技术能力\protect\footnote{与求职岗位无关的技能省略或用灰色表示。}}
-\begin{itemize}
-  \item \textbf{语言}: 编程不受特定语言限制。常用 Rust, Golang, Python,C++； 熟悉 C, \GrayText{JavaScript}；了解 Lua, Java, \GrayText{TypeScript}。
-  \item \textbf{工作流}: Linux, Shell, (Neo)Vim, Git, GitHub, GitLab.
-  \item \textbf{其他}: 有容器化技术的实践经验，熟悉 Kubernetes 的使用。
-\end{itemize}
-
-\section{工作经历}
-
-\ResumeItem{北京 ABCD 有限公司}
-[后端开发实习生/XXXX]
-[2020.10—2021.03] 
-
-\begin{itemize}
-  \item \textbf{独立负责XXX业务后端的设计、开发、测试和部署。}通过 FaaS、Kafka 等平台实现站内信模板渲染服务。向上游提供 SDK 代码，增加或升级了多种离线和在线逻辑。完成了业务对站内信的多样需求。
-  \item \textbf{参与 XXX 的需求分析，系统技术方案设计；完成需求开发、灰度测试、上线和监控。}
-\end{itemize}
-
-\section{项目经历}
-
-\ResumeItem{\textbf{BusTub} 基于 C++ 的简易单机数据库}
-[ \textnormal{CMU 15-445} 课程]
-\begin{itemize}
-  \item 实现了基于可扩展哈希表和LRU-K的内存池管理。实现了可并发的B+树，支持乐观加锁的读写操作。
-  \item 采用火山模型实现了查询、修改、连接、聚合等查询执行器，对部分查询进行了改写与下推。
-  \item 采用 2PL 进行并发控制，支持死锁处理、多种隔离级别、表锁和行锁。
-  \item 对数据库系统有了基本的认识和实践。
-\end{itemize}
-
-
-\ResumeItem{\textbf{Multi-Raft} 分布式 \textbf{KV} 存储系统}
-[ \textnormal{MIT 6.824} 课程]
-\begin{itemize}
-  \item 实现了 Raft 协议的选举、日志复制、持久化、日志压缩等基本功能。
-  \item 基于 Raft 协议实现了满足线性一致性的 KV 数据库。
-  \item 采用 Multi-Raft 架构，支持数据分片，分片迁移，分片垃圾回收和分片迁移时读写优化。
-  \item 对分布式系统的设计考量有了更多的认识。
-\end{itemize}
-
-\ResumeItem{\textbf{ZYX} 平台下的某某共识算法设计与实现}
-[共识算法设计与实现]
-[2021.11—2022.07] 
-
-\begin{itemize}
-  \item 根据 ZYX (Rust 实现的开源区块链框架) 的架构，\textbf{修改并实现某某某共识算法}。
-  \item 针对系统进行性能测试，分析瓶颈，并优化吞吐量；TPS 由 1K 达到 6K。
-  \item 此项目为实验室研究项目的一部分。
-\end{itemize}
-
-\ResumeItem[BIThesis 北京理工大学毕设模板集合(开源项目)]
-{\ResumeUrl{https://github.com/BITNP/BIThesis}{\textbf{BIThesis} 北京理工大学毕设 \LaTeX 模板集合}}
-[主要维护者（开源项目）]
-[2020.04 至今]
-
-\begin{itemize}
-  \item 根据相关排版要求，\textbf{利用 LaTeX3 (expl3) 设计了同时符合各个学位要求且支持灵活配置的宏包及多套模板}。
-  \item 需求开发和问题修复采用标准工作流，引入了回归测试与基于 GitHub Actions 的测试与持续集成。
-  \item 负责了什么什么；完成了怎样的结果。
-\end{itemize}
 
 \section{个人总结}
 
 \begin{itemize}
-  \item 本人乐观开朗、在校成绩优异、自驱能力强，具有良好的沟通能力和团队合作精神。
-  \item 可以使用英语进行工作交流（六级成绩 XXX），平时有阅读英文书籍和口语练习的习惯。
-  \item 有六年 Linux 使用经验，较为丰富的软件开发经验、开源项目贡献和维护经验。善于技术写作，持续关注互联网技术发展。
+  \item 有五年以上异构平台(CPU/GPU/DSP/NPU)算子加速库经验，包括 DNN, BLAS, FFT 等。深度参与0-1芯片软硬件研发；
+  \item 有两年带团队经验，团队规模10人左右；
+  \item 有较强的软件工程能力（项目落地），很强的学习力，坚持精益求精，做精品。
+\end{itemize}
+
+\section{教育经历}
+\ResumeItem
+[台湾大学|硕士研究生]
+{台湾大学大学}
+[\textnormal{电信研究所|}  学术型硕士研究生]
+[2014.09—2017.01]
+WIFI 802.11ax 协议设计，分别在 IEEE access 期刊，及通信领域顶会 globalcom 上发表两篇论文。
+
+\nocite{*} % Include all publications from the BibTeX file
+%% If you just want everything in one list
+\printbibliography[heading={none}]
+
+% \printbibliography[heading={subbibliography},title={Journal Articles},type=article]
+% \printbibliography[heading={subbibliography},title={Conference Proceedings},type=inproceedings]
+
+
+\ResumeItem
+[重庆大学|本科生]
+{重庆大学}
+[\textnormal{通信学院|} 工学学士]
+[2010.09—2014.06]
+
+\textbf{专业前 5\%}，优秀毕业生，获奖学金多次
+
+% \section[技术能力]{技术能力\protect\footnote{与求职岗位无关的技能省略或用灰色表示。}}
+\section[技术能力]{技术能力\protect\footnote{与求职岗位无关的技能省略或用灰色表示。}}
+\begin{itemize}
+  \item \textbf{技术栈}: 日常使用 C++, Python, cuda, 熟悉软硬件协同优化，zebu;
+  \item \textbf{工作流}: cmake, Linux, bash, Vim, Git, GitHub, JIRA, docker, markdown, jenkins, 英文工作环境.
+\end{itemize}
+
+\section{工作经历}
+
+\ResumeItem{壁仞科技}
+[软件工程师/team leader/算子加速库]
+[2021.1 至今]
+
+\begin{itemize}
+  \item 基于 GPGPU 平台从零开发 AI/HPC 领域加速库
+  \item 带领10人左右团队
+\end{itemize}
+
+\ResumeItem{海康威视}
+[软件工程师/AI 加速库/商业应用]
+[2017.7—2020.12] 
+
+\begin{itemize}
+  \item \textbf{异构平台高性能卷积神经网络CNN库}开发，调研评估芯片性能；
+  \item 端到端负责算法侧项目，深入梳理业务需求，构建高效的应用方案，加速智能算法落地；
+\end{itemize}
+
+\section{项目经历}
+
+\ResumeItem{基于 C++ 开发 \textbf{BLAS} 加速库}
+[0-1开发维护]
+[2021.11-至今]
+\begin{itemize}
+  \item lead 项目立项，设计，系统构建，开发，测试，部署 CICD，文档，通过 JIRA 进行任务管理；
+  \item 实现了算子注册框架，日志系统，核心算子开发；
+  \item 核心算子(GEMM/GEMV/reduce)性能优化；
+  \item 对软件产品的 SDLC 有了一定理解。
+\end{itemize}
+
+
+\ResumeItem{设计 DSL 开发 \textbf{DNN} 测试框架}
+[基于 yaml 自定义算子用例表达]
+[2022.3—2022.6]
+
+\begin{itemize}
+  \item 设计基于 yaml 的算子/图用例表达，使得用例表达更加可读，易于管理；
+  \item 基于 gtest 设计 tester，支持算子/图多种粒度的测试，支持多个 backend 测试，支持离线数据加载等；
+  \item 对标业界主流精度对比方案，支持多种 data type, op type, 特定硬件实现等弹性精度设置；
+  \item 集成性能测试工具，自动生成性能测试报告；
+  \item 部署 CICD，自动化守护 DNN 精度/性能；
+\end{itemize}
+
+
+\ResumeItem{\textbf{GEMM} 极致优化实现}
+[基于 zebu 极致优化]
+[2021.9—2021.10]
+
+\begin{itemize}
+  \item 手写汇编在 vcore 上实现极致性能 GEMM，做到特定 shape 下利用率打满。
+  \item 使用 zebu 查看 waveform，优化到 cycle 级别。
+  \item 基于 tcore 实现模拟 fp32 GEMM 算法，也做到特定 shape 下利用率打满，性能超过A100。
 \end{itemize}
 
 
