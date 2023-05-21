@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/latex
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex
 
+## common ignore
+.vscode/
+
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.aux
@@ -15,6 +18,7 @@
 *.cb
 *.cb2
 .*.lb
+log.txt
 
 ## Intermediate documents:
 *.dvi
