@@ -13,6 +13,7 @@ A LaTeX resume designed for optimal information density and aesthetic appeal.
 - 支持生成 PDF 书签。
 - 精简依赖，不默认引入其他字体，不默认引入图标。
 - 提供超链接、脚注、非重点内容的排版示例。
+- (🖼️)支持插入照片（请看代码注释）。
 
 ## 使用方法
 
