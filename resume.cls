@@ -143,9 +143,11 @@
       \stepcounter{resumebookmark}
     }
     \IfValueT{#3}{
-      \ | 
-      \textit{
-        #3
+      \tl_if_empty:nF {#3} {
+        \ | 
+        \textit{
+          #3
+        }
       }
     }
     \hfill
