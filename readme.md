@@ -4,6 +4,8 @@ A LaTeX resume designed for optimal information density and aesthetic appeal.
 
 一个旨在实现最佳的信息密度和美学吸引力的 $\LaTeX$ 简历排版模板项目。
 
+> 不熟悉 LaTeX？欢迎尝鲜 Typst 版本的 [Resume-NG](https://github.com/fky2015/resume-ng-typst)！
+
 <div align="center">
   <img src="https://github.com/fky2015/resume-ng/assets/16451516/0934b2be-6b8f-4766-a242-6c07b7036f1f" width="90%">
 </div>
