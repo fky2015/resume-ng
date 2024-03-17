@@ -1,9 +1,7 @@
-% !TeX TS-program = xelatex
-
 \documentclass{resume}
-\ResumeName{冯开宇}
+\ResumeName{Feng Kaiyu}
 
-% 如果想插入照片，请使用以下两个库。
+% Uncomment this code if you want to insert a photo. 
 % \usepackage{graphicx}
 % \usepackage{tikz}
 
@@ -12,14 +10,14 @@
 \ResumeContacts{
   (+86)188-8888-8888,%
   \ResumeUrl{mailto:loveress01@outlook.com}{loveress01@outlook.com},%
-  \ResumeUrl{https://blog.fkynjyq.com}{blog.fkynjyq.com} \footnote{下划线内容包含超链接。},%
+  \ResumeUrl{https://blog.fkynjyq.com}{blog.fkynjyq.com} \footnote{Underlined content contains hyperlinks.},%
   \ResumeUrl{https://github.com/fky2015}{github.com/fky2015}%
 }
 
-% 如果想插入照片，请取消此代码的注释。
-% 但是默认不推荐插入照片，因为这不是简历的重点。
-% 如果默认的照片插入格式不能满足你的需求，你可以尝试调整照片的大小，或者使用其他的插入照片的方法。
-% 不然，也可以先渲染 PDF 简历，然后用其他工具在 PDF 上叠加照片。
+% Uncomment this code if you want to insert a photo. 
+% But inserting a photo is not recommended by default, as it is not the focus of the resume.
+% If the default photo insertion format doesn't meet your needs, you can try resizing the photo or using another method of inserting the photo.
+% Otherwise, you can also render the PDF resume and then use other tools to overlay photos on the PDF.
 % \begin{tikzpicture}[remember picture, overlay]
 %   \node [anchor=north east, inner sep=1cm]  at (current page.north east) 
 %      {\includegraphics[width=2cm]{image.png}};
@@ -28,91 +26,96 @@
 \ResumeTitle
 
 
-\section{教育经历}
-\ResumeItem
-[北京理工大学大学|硕士研究生]
-{北京理工大学}
-[\textnormal{网络空间安全，网络空间安全学院|}  学术型硕士研究生]
-[2021.09—2024.06（预计）]
-
-\textbf{GPA: 3.62/4.0}，主要研究方向为\textbf{拜占庭共识算法}，在分布式系统领域方面有一定的研究和工程经验。\textbf{2024年应届生}。
-
-主要研究成果为：发表在 XXX 期刊上的论文《XXX》。
+\section*{Educations}
+\pdfbookmark[1]{Educations}{}
 
 \ResumeItem
-[北京理工大学大学|本科生]
-{北京理工大学}
-[\textnormal{计算机科学与技术，计算机学院|} 工学学士]
+[Beijing Institute of Technology | Postgraduate]
+{Beijing Institute of Technology}
+[ \textnormal{Computer Science}  Postgraduate]
+[2021.09—2024.06]
+
+\textbf{GPA: 3.62/4.0}. My main research interest 
+is in \textbf{Byzantine Consensus Algorithm}, 
+and I have some research and engineering experience in the field of distributed systems.
+
+\ResumeItem
+[Beijing Institute of Technology | Undergraduate]
+{Beijing Institute of Technology}
+[ \textnormal{Computer Science} Undergraduate]
 [2017.09—2021.06]
 
-\textbf{GPA: 3.7/4.0(专业前 3\%)}，获学业奖学金多次，全国大学生 XYZ 竞赛二等奖（2次），ZYX 竞赛三等奖。
+\textbf{GPA: 3.7/4.0 (top 3\% in major)}, received several academic scholarships, second prize (2 times) in the National College Students' XYZ Competition, and third prize in the ZYX Competition.
 
-\section[技术能力]{技术能力\protect\footnote{与求职岗位无关的技能省略或用灰色表示。}}
+\section*{Skills\protect\footnote{Skills that are not relevant to the job search are omitted or grayed out.}}
+\pdfbookmark[1]{Skills}{}
+
 \begin{itemize}
-  \item \textbf{语言}: 编程不受特定语言限制。常用 Rust, Golang, Python,C++； 熟悉 C, \GrayText{JavaScript}；了解 Lua, Java, \GrayText{TypeScript}。
-  \item \textbf{工作流}: Linux, Shell, (Neo)Vim, Git, GitHub, GitLab.
-  \item \textbf{其他}: 有容器化技术的实践经验，熟悉 Kubernetes 的使用。
+  \item \textbf{Programming Languages}: Commonly used Rust, Golang, Python,C++; Familiar with C, \GrayText{JavaScript}.
+  \item \textbf{Workflows}: Linux, Shell, (Neo)Vim, Git, GitHub, GitLab.
+  \item \textbf{Misc}: Hands-on experience with containerization technologies and familiarity with \textbf{Kubernetes}.
 \end{itemize}
 
-\section{工作经历}
+\section*{Work Experience}
+\pdfbookmark[1]{Work Experience}{}
 
-\ResumeItem{北京 ABCD 有限公司}
-[后端开发实习生/XXXX]
+\ResumeItem{Foo Bar Corporation | San Jose, CA}
+[ Backend Developer Intern/XXXX]
 [2020.10—2021.03] 
 
 \begin{itemize}
-  \item \textbf{独立负责XXX业务后端的设计、开发、测试和部署。}通过 FaaS、Kafka 等平台实现站内信模板渲染服务。向上游提供 SDK 代码，增加或升级了多种离线和在线逻辑。完成了业务对站内信的多样需求。
-  \item \textbf{参与 XXX 的需求分析，系统技术方案设计；完成需求开发、灰度测试、上线和监控。}
+   \item \textbf{Independently responsible for the design, development, testing and deployment of XXX business backend.} Implemented station letter template rendering service through FaaS, Kafka and other platforms. Provided SDK code to upstream, added or upgraded various offline and online logic.
+  \item \textbf{Participate in XXX's requirement analysis, system technical solution design; complete requirement development, grey scale testing, go-live and monitoring.}
 \end{itemize}
 
-\section{项目经历}
+\section*{Projects}
+\pdfbookmark[1]{Projects}{}
 
-\ResumeItem{\textbf{BusTub} 基于 C++ 的简易单机数据库}
-[ \textnormal{CMU 15-445} 课程]
+\ResumeItem{\textbf{BusTub} Simple stand-alone database based on C++}
+[ \textnormal{CMU 15-445} Course Project]
+[2023.02—2023.03]
 \begin{itemize}
-  \item 实现了基于可扩展哈希表和LRU-K的内存池管理。实现了可并发的B+树，支持乐观加锁的读写操作。
-  \item 采用火山模型实现了查询、修改、连接、聚合等查询执行器，对部分查询进行了改写与下推。
-  \item 采用 2PL 进行并发控制，支持死锁处理、多种隔离级别、表锁和行锁。
-  \item 对数据库系统有了基本的认识和实践。
+  \item Implemented a memory pool manager based on an extensible hash table and LRU-K, and developed a concurrent B+ tree supporting optimistic locking for read and write operations.
+  \item Utilized the volcano model to implement executors for queries, updates, joins, and aggregations, and performed query rewriting and pushing down optimizations.
+  \item Implemented concurrency control using 2PL (two-phase locking), supporting deadlock handling, multiple isolation levels, table locks, and row locks.
 \end{itemize}
 
 
-\ResumeItem{\textbf{Multi-Raft} 分布式 \textbf{KV} 存储系统}
-[ \textnormal{MIT 6.824} 课程]
+\ResumeItem{\textbf{Multi-Raft} Distributed \textbf{KV} Storage System}
+[ \textnormal{MIT 6.824} Course Project]
+[2022.04—2022.08]
 \begin{itemize}
-  \item 实现了 Raft 协议的选举、日志复制、持久化、日志压缩等基本功能。
-  \item 基于 Raft 协议实现了满足线性一致性的 KV 数据库。
-  \item 采用 Multi-Raft 架构，支持数据分片，分片迁移，分片垃圾回收和分片迁移时读写优化。
-  \item 对分布式系统的设计考量有了更多的认识。
+  \item Implemented basic functions of Raft protocol: election, log replication, persistence, and log compaction.
+  \item Developed a KV database that satisfies linearizability based on the Raft protocol.
+  \item Adopted a Multi-Raft architecture, supporting data sharding, shard migration, garbage collection of shards, and read-write optimization during shard migration.
+  \item Gained a deeper understanding of the design considerations for distributed systems.
 \end{itemize}
 
-\ResumeItem{\textbf{ZYX} 平台下的某某共识算法设计与实现}
-[共识算法设计与实现]
+\ResumeItem{A Certain Consensus Algorithm under XYZ Platform}
+[ Design and Implementation]
 [2021.11—2022.07] 
 
 \begin{itemize}
-  \item 根据 ZYX (Rust 实现的开源区块链框架) 的架构，\textbf{修改并实现某某某共识算法}。
-  \item 针对系统进行性能测试，分析瓶颈，并优化吞吐量；TPS 由 1K 达到 6K。
-  \item 此项目为实验室研究项目的一部分。
+  \item Modified and implemented a certain consensus algorithm based on the architecture of ZYX.
+  \item Conducted performance testing, analyzed bottlenecks, and optimized throughput; TPS increased from 1K to 6K.
 \end{itemize}
 
-\ResumeItem[BIThesis 北京理工大学毕设模板集合(开源项目)]
-{\ResumeUrl{https://github.com/BITNP/BIThesis}{\textbf{BIThesis} 北京理工大学毕设 \LaTeX 模板集合}}
-[主要维护者（开源项目）]
-[2020.04 — 今]
+\ResumeItem[BIThesis LaTeX Thesis Template Collection (Open Source Project)]
+{\ResumeUrl{https://github.com/BITNP/BIThesis}{\textbf{BIThesis} \LaTeX{} Thesis Template Collection (Open Source Project)}}
+[ Maintainer]
+[2020.04—Present]
 
 \begin{itemize}
-  \item 根据相关排版要求，\textbf{利用 LaTeX3 (expl3) 设计了同时符合各个学位要求且支持灵活配置的宏包及多套模板}。
-  \item 需求开发和问题修复采用标准工作流，引入了回归测试与基于 GitHub Actions 的测试与持续集成。
-  \item 负责了什么什么；完成了怎样的结果。
+  \item In accordance with specific typesetting requirements, designed macro packages and multiple sets of templates that meet various degree requirements and support flexible configuration using LaTeX3 (expl3).
+  \item Standard workflows were used for requirement development and bug fixes, incorporating regression testing and continuous integration with GitHub Actions.
 \end{itemize}
 
-\section{个人总结}
+\section*{Personal Summary}
+\pdfbookmark[1]{Personal Summary}{}
 
 \begin{itemize}
-  \item 本人乐观开朗、在校成绩优异、自驱能力强，具有良好的沟通能力和团队合作精神。
-  \item 可以使用英语进行工作交流（六级成绩 XXX），平时有阅读英文书籍和口语练习的习惯。
-  \item 有六年 Linux 使用经验，较为丰富的软件开发经验、开源项目贡献和维护经验。善于技术写作，持续关注互联网技术发展。
+\item I am optimistic and cheerful, with excellent academic performance and strong self-motivation.
+\item I have six years of experience using Linux, a wealth of software development experience, and experience in contributing to and maintaining open-source projects. I am skilled in technical writing and continuously follow the developments in internet technology.
 \end{itemize}
 
 

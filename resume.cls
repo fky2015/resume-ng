@@ -3,9 +3,8 @@
 {2022-12-26}{0.1.0}{Another Resume Class by Feng Kaiyu}
 
 % Keep Quiet
-\PassOptionsToPackage{quiet}{xeCJK}
 \ProcessOptions\relax
-\LoadClass[zihao=5,autoindent=0.5em]{ctexart}
+\LoadClass[]{article}
 
 % Define paper size.
 \RequirePackage{geometry}
@@ -16,8 +15,12 @@
 % Align all footnotes in a row.
 \RequirePackage[para]{footmisc}
 \RequirePackage[colorlinks=false,hidelinks,]{hyperref}
-% For the usage of `\CJKunderline`.
-\RequirePackage{xeCJKfntef}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[tt=false]{libertine}
+\usepackage{titlesec}
+\usepackage[scaled]{helvet}
+\usepackage{helvet}
 % Provide colors.
 \RequirePackage{xcolor}
 
@@ -36,20 +39,25 @@
 
 %%% Global Settings %%%
 
+\setmonofont{inconsolata}
+
 % No page number.
 \pagenumbering{gobble}
 
+\titleformat{\section}
+  {\bfseries\scshape\large}{\thesection}{0em}{\__resume_section_title_format:n}
+\titlespacing{\section}{0pt}{0pt}{-10pt}
 % Set the style of section title.
-\ctexset{
-  section = {
-    nameformat = {},
-    number = {},
-    format = \noindent \zihao{4} \heiti \__resume_section_title_format:n,
-    indent = -1em,
-    afterskip = 0.5em,
-    beforeskip = 0.2em,
-  },
-}
+% \ctexset{
+%   section = {
+%     nameformat = {},
+%     number = {},
+%     format = \noindent \zihao{4} \heiti \__resume_section_title_format:n,
+%     indent = -1em,
+%     afterskip = 0.5em,
+%     beforeskip = 0.2em,
+%   },
+% }
 
 % Set the style of list.
 \setlist{
@@ -109,7 +117,9 @@
 \NewDocumentCommand{\ResumeTitle}{}
 {
   \begin{center}
-    \zihao{-2} \heiti \g__resume_title_name_tl
+    \bfseries
+    \LARGE 
+    \g__resume_title_name_tl
   \end{center}
   % Reduce the space.
   \vspace{-1.4em}
@@ -126,11 +136,12 @@
 \NewDocumentCommand{\ResumeItem}{omoo}
 {
   {
-    \zihao{-4}
+    \large
+    % \zihao{-4}
     \par 
     \noindent
     {
-      \heiti
+      % \fontfamily{Helvet}\selectfont
       #2
       
       \IfValueTF{#1}
@@ -167,7 +178,9 @@
 % Render content with a hyperlink, marked with underline.
 \NewDocumentCommand{\ResumeUrl}{mm}
 {
-  \href{#1}{\CJKunderline{#2}}
+  \href{#1}{\underline{#2}}
 }
+
+\setlength{\parindent}{4pt}
 
 \endinput
