@@ -69,4 +69,4 @@ A LaTeX resume designed for optimal information density and aesthetic appeal.
 并采用 $\LaTeX3$ 写成。
 
 
-[overleaf]: https://www.overleaf.com/docs?snip_uri=https://github.com/fky2015/resume-ng/releases/download/latest/resume-ng-zh.zip&engine=xelatex
+[overleaf]: https://www.overleaf.com/docs?snip_uri=https://github.com/fky2015/resume-ng/releases/latest/download/resume-ng-zh.zip&engine=xelatex
