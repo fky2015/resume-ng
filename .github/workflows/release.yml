@@ -20,6 +20,12 @@ jobs:
             - name: Zip source code
               run: zip -r resume-ng-zh.zip .
 
+            - name: Release
+              uses: softprops/action-gh-release@v2
+              if: startsWith(github.ref, 'refs/tags/')
+              with:
+                files: resume-ng-zh.zip
+
             - name: Checkout
               uses: actions/checkout@v4
               with:
@@ -32,6 +38,4 @@ jobs:
               uses: softprops/action-gh-release@v2
               if: startsWith(github.ref, 'refs/tags/')
               with:
-                files: |
-                    resume-ng-zh.zip
-                    resume-ng-en.zip
+                files: resume-ng-en.zip
