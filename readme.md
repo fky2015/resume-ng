@@ -32,7 +32,7 @@ A LaTeX resume designed for optimal information density and aesthetic appeal.
 
 ### Overleaf 在线平台
 
-直接访问并复制[此项目][overleaf]即可。
+直接访问[此链接][overleaf]即可。
 
 ## 宏
 
