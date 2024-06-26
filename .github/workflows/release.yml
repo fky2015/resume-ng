@@ -1,0 +1,46 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Release
+
+
+on:
+    # Triggers the workflow on release
+    release:
+        types: [published]
+
+
+# A workflow that zip the source code and upload it as a release asset.
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Zip source code
+              run: zip -r resume-ng-zh.zip .
+
+            - name: Upload release asset
+              uses: actions/upload-release-asset@v1
+              with:
+                  upload_url: ${{ github.event.release.upload_url }}
+                  asset_path: ./resume-ng-zh.zip
+                  asset_name: resume-ng-zh.zip
+                  asset_content_type: application/zip
+
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  ref: english
+
+            - name: Zip source code
+              run: zip -r resume-ng-en.zip .
+
+            - name: Upload release asset
+              uses: actions/upload-release-asset@v1
+              with:
+                  upload_url: ${{ github.event.release.upload_url }}
+                  asset_path: ./resume-ng-en.zip
+                  asset_name: resume-ng-en.zip
+                  asset_content_type: application/zip
