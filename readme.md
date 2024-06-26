@@ -3,8 +3,9 @@
 A LaTeX resume designed for optimal information density and aesthetic appeal.
 
 <div align="center">
-  <img src="https://github.com/fky2015/resume-ng/assets/16451516/0934b2be-6b8f-4766-a242-6c07b7036f1f" width="90%">
+  <img src="https://github.com/fky2015/resume-ng/assets/16451516/57eb6d6e-3bc0-4012-92bf-baad362d77be" width="90%">
 </div>
+
 The features of this template include:
 - Increased information density of the resume through layout adjustments.
 - Support for generating PDF bookmarks.
@@ -22,7 +23,7 @@ The features of this template include:
 
 ### Overleaf Online Platform
 
-You can directly access and copy [this project][overleaf].
+You can directly access [this link][overleaf].
 
 ## Macros
 
@@ -53,4 +54,4 @@ Common usage can be found in the example content in `main.tex`.
 This project was primarily inspired by [hijiangtao/resume](https://github.com/hijiangtao/resume) and further improved based on the layout concept of "increasing information density in a single page resume". It is written in $\LaTeX3$.
 
 
-[overleaf]: https://www.overleaf.com/read/ygxtzycvwyqm
+[overleaf]: https://www.overleaf.com/docs?snip_uri=https://github.com/fky2015/resume-ng/releases/latest/download/resume-ng-en.zip&engine=xelatex
